@@ -16,20 +16,18 @@ const AboutSection = () => {
                 ABOUT US
               </h2>
               <div className="w-20 h-1 bg-amber-500"></div>
-              <p className="text-2xl  lg:text-3xl font-light text-amber-600 italic">
+              <p className="text-xl  lg:text-2xl font-light text-amber-600 italic">
                 "Building Legacies, One Plot at a Time"
               </p>
             </div>
 
             {/* Intro Paragraph */}
             <div className="space-y-4 text-gray-700">
-              <p className="text-lg sm:text-xl leading-relaxed font-light">
-                At Legacy Estates Limited, we don't just sell land, we help Kenyans build generational wealth.
+              <p className="text-lg sm:text-xl leading-relaxed font-light ">
+                At Legacy Estates Limited, we don't just sell land, we help Kenyans build generational wealth. We exist to make land ownership accessible, transparent, and secure for both local and diaspora buyers.
               </p>
-              <p className="text-lg sm:text-xl leading-relaxed font-light">
-                We exist to make land ownership accessible, transparent, and secure for both local and diaspora buyers.
-              </p>
-              <p className="text-lg sm:text-xl leading-relaxed font-light">
+              
+              <p className="text-lg sm:text-xl leading-relaxed font-light ">
                 Every property we offer is beaconed, titled, and verified, giving you total peace of mind and a foundation for your dreams.
               </p>
             </div>
@@ -40,8 +38,8 @@ const AboutSection = () => {
                 to="/about"
                 className="inline-flex items-center gap-2 text-lg md:text-xl text-amber-500 underline font-light"
               >
-                Learn More About Us
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                Explore more about us
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
