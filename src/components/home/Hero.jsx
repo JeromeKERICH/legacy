@@ -79,12 +79,12 @@ const HeroSection = () => {
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 rounded-full mb-6 sm:mb-7 md:mb-8 backdrop-blur-sm border border-amber-400/30 shadow-lg shadow-amber-500/20">
             <FaGlobe className="text-white text-sm sm:text-base" />
             <span className="font-semibold text-xs sm:text-sm md:text-base uppercase tracking-wider">
-              Global Land Ownership
+              Own, Invest, Prosper
             </span>
           </div>
 
           {/* Optimized Headline for all screens */}
-          <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black mb-4 sm:mb-5 md:mb-6 leading-tight">
+          <h1 className="text-3xl  xs:text-4xl sm:text-5xl lg:text-6xl font-black mb-4 sm:mb-5 md:mb-6 leading-tight">
             <span className="bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 bg-clip-text text-transparent">
               Own Land, <br/> < span className='text-white/30'>or Property</span>
             </span>
@@ -101,7 +101,7 @@ const HeroSection = () => {
 
           {/* Optimized Subheadline */}
           <div className="max-w-4xl mx-auto mb-6">
-            <p className="text-lg sm:text-xl md:text-xl lg:text-2xl mb-3 sm:mb-4 md:mb-5 text-gray-200 leading-relaxed font-light px-2 sm:px-4">
+            <p className="text-lg sm:text-xl text-justify md:text-center md:text-xl lg:text-2xl mb-3 sm:mb-4 md:mb-5 text-gray-200 leading-relaxed font-light px-2 sm:px-4">
               Whether you're in <span className="text-amber-300 font-semibold">Nairobi</span> or{' '}
               <span className="text-amber-300 font-semibold">New York</span>, Legacy Estates makes land ownership simple, secure, and transparent.
             </p>
