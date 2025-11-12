@@ -29,6 +29,7 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
     { name: 'Properties', path: '/listings' },
     { name: 'Legacy Digest', path: '/legacy' },
     { name: 'Contact', path: '/contact' }
@@ -77,7 +78,7 @@ const Navbar = () => {
             <div className="hidden lg:block">
               <button 
                 onClick={handlePlotClick}
-                className="bg-[#C8A038]  text-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-amber-500/25"
+                className="bg-amber-300 text-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-amber-500/25"
               >
                 Own a Plot Today
               </button>
@@ -133,7 +134,7 @@ const Navbar = () => {
               <div className="pt-4">
                 <button
                   onClick={handlePlotClick}
-                  className="w-full bg-[#C8A038]  text-white px-6 py-3 rounded-full text-base font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg"
+                  className="w-full bg-amber-300  text-white px-6 py-3 rounded-full text-base font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg"
                 >
                   Own a Plot Today
                 </button>

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const AboutHero = () => {
+const ServiceHero = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -9,7 +9,7 @@ const AboutHero = () => {
     <section 
       className="relative rounded-3xl p-8 border border-gray-700 hover:border-amber-400/30 transition-all duration-500 hover:shadow-xl hover:shadow-amber-500/10 overflow-hidden min-h-[300px] flex items-center"
       style={{
-        backgroundImage: `linear-gradient(135deg, rgba(17, 24, 39, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%), url('/assets/ab.png')`,
+        backgroundImage: `linear-gradient(135deg, rgba(17, 24, 39, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundBlendMode: 'overlay'
@@ -27,8 +27,7 @@ const AboutHero = () => {
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
         
-     
-
+        
 
       </div>
       
@@ -41,4 +40,4 @@ const AboutHero = () => {
   );
 };
 
-export default AboutHero;
+export default ServiceHero;

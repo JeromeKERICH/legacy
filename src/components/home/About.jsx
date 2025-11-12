@@ -51,25 +51,20 @@ const AboutSection = () => {
 
           {/* Image Side */}
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-300/20">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl ">
               <img
                 src="/assets/about.jpg"
                 alt="Legacy Estates - Building Legacies"
-                className="w-full md:h-[450px] h-[300px] object-cover transition-all duration-500 hover:scale-110 hover:brightness-110"
+                className="w-full md:h-[450px] h-[300px] object-cover hover:brightness-110"
               />
-              {/* Amber gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-amber-300/10 mix-blend-overlay"></div>
+    
             </div>
             
             {/* Decorative Elements */}
             <div className="absolute -bottom-8 -right-8 w-28 h-28 bg-amber-300/10 rounded-full blur-sm"></div>
             <div className="absolute -top-8 -left-8 w-20 h-20 bg-amber-300/5 rounded-full blur-sm"></div>
             
-            {/* Corner Accents */}
-            <div className="absolute top-4 left-4 w-6 h-6 border-t-2 border-l-2 border-amber-300"></div>
-            <div className="absolute top-4 right-4 w-6 h-6 border-t-2 border-r-2 border-amber-300"></div>
-            <div className="absolute bottom-4 left-4 w-6 h-6 border-b-2 border-l-2 border-amber-300"></div>
-            <div className="absolute bottom-4 right-4 w-6 h-6 border-b-2 border-r-2 border-amber-300"></div>
+            
           </div>
 
         </div>

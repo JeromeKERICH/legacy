@@ -31,6 +31,7 @@ import Contact from "./pages/Contact";
 import BlogList from "./pages/admin/blog/BlogList";
 import BlogEditor from "./pages/admin/blog/BlogEditor";
 import Articles from "./pages/Articles";
+import Service from "./pages/Service";
 
 // 🛡️ General Protected Route
 function ProtectedRoute({ children, roles }) {
@@ -69,6 +70,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About/>}/>
           <Route path="/contact" element={<Contact/>}/>
+          <Route path="/services" element={<Service/>}/>
           <Route path="/listings" element={<Listings />} />
           <Route path="/legacy" element={<Articles/>}/>
           <Route path="/property/:slug" element={<PropertyDetail />} />

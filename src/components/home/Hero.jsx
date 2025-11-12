@@ -12,7 +12,7 @@ const HeroSection = () => {
   // Optimized media assets for all screen sizes
   const mediaAssets = [
     {
-      src: '/assets/14.jpg'
+      src: '/assets/22.PNG'
     },
     {
       src: '/assets/13.jpg'
@@ -46,7 +46,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-black flex items-center justify-center">
-      {/* Media Background with Black Gradient */}
+      {/* Enhanced Media Background with Multi-layer Gradients */}
       <div className="absolute inset-0">
         {mediaAssets.map((media, index) => (
           <div
@@ -62,92 +62,135 @@ const HeroSection = () => {
               alt={`Luxury property ${index + 1}`}
               className="w-full h-full object-cover"
             />
-            {/* Enhanced Black Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/50 to-black/60"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40"></div>
-            {/* Additional diagonal gradient for depth */}
-            <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-transparent to-black/80"></div>
+            {/* Multi-layer Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-transparent to-black/70"></div>
+            {/* Animated light effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-500/5 to-transparent animate-pulse"></div>
           </div>
         ))}
       </div>
 
-      {/* Content Container - Optimized for all screens */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-16 md:py-20 lg:py-24 xl:py-32">
+      {/* Floating Particles Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-amber-400/30 rounded-full animate-float"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${15 + Math.random() * 10}s`
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Content Container - Premium Design */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 xl:py-32">
         <div className={`text-center text-white w-full transition-all duration-1000 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
         }`}>
           
-          {/* Premium Badge - Always visible but properly sized */}
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FFD700] to-amber-600 px-3 py-1 sm:px-3 sm:py-2.5 md:px-3 md:py-2 rounded-full mb-6 sm:mb-7 md:mb-8 backdrop-blur-sm border border-[#FFD700]/30 shadow-lg shadow-[#FFD700]/20">
-            <FaGlobe className="text-white text-sm sm:text-base" />
-            <span className="font-light text-xs sm:text-sm md:text-base uppercase tracking-wider">
-              Own, Invest, Prosper
-            </span>
-          </div>
 
-          {/* Optimized Headline for all screens */}
-          <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black mb-4 sm:mb-5 md:mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-[#FFD700] via-amber-300 to-[#FFD700] bg-clip-text text-transparent">
-              Own Land, <br/> <span className='text-white/80'>or Property</span>
-            </span>
-            <span className="text-white"> In Kenya</span> <br />
-            <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4 mt-3 sm:mt-4 md:mt-5">
-              <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#FFD700] font-light whitespace-nowrap">
-                From
+          {/* Premium Headline with Enhanced Typography */}
+          <div className="mb-8">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-black mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 bg-clip-text text-transparent animate-gradient">
+                Own a Land,
               </span>
-              <span className="bg-gradient-to-r from-[#FFD700] via-white to-amber-100 bg-clip-text text-transparent text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold whitespace-nowrap">
-                Anywhere
+              <br />
+              <span className="text-white/90 drop-shadow-2xl">
+                Build Legacy
               </span>
+            </h1>
+            
+            {/* Animated Price Tag */}
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="w-12 h-px bg-amber-400/50"></div>
+              <span className="text-amber-300 text-lg sm:text-xl font-light tracking-widest">
+                FROM ANYWHERE IN THE WORLD
+              </span>
+              <div className="w-12 h-px bg-amber-400/50"></div>
             </div>
-          </h1>
-
-          {/* Optimized Subheadline */}
-          <div className="max-w-4xl mx-auto mb-6">
-            <p className="text-lg sm:text-xl md:text-xl lg:text-2xl mb-3 sm:mb-4 md:mb-5 text-gray-200 leading-relaxed font-light px-2 sm:px-4">
-              Whether you're in <span className="text-[#FFD700] font-semibold">Nairobi</span> or{' '}
-              <span className="text-[#FFD700] font-semibold">New York</span>, Legacy Estates makes land ownership simple, secure, and transparent.
-            </p>
-            <p className="text-base sm:text-lg md:text-xl text-amber-100/80 leading-relaxed px-2 sm:px-4">
-              Invest in verified plots with flexible payments and instant title transfers.
-            </p>
           </div>
 
-          {/* Optimized Features Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 max-w-2xl lg:max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-10 lg:mb-12 px-2">
+          {/* Enhanced Subheadline */}
+          <div className="max-w-3xl mx-auto mb-10">
+            
+            <div className="inline-flex items-center gap-2 text-amber-200/80 text-lg">
+              <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></div>
+              <span>100% Verified & Legally Compliant</span>
+            </div>
+          </div>
+
+          {/* Premium Features Grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12 px-4">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center text-center p-3 sm:p-4 md:p-5 rounded-xl md:rounded-2xl transition-all duration-500 group hover:scale-105 hover:bg-black/30 backdrop-blur-sm"
+                className="group relative p-6 rounded-2xl transition-all duration-500 hover:transform hover:scale-105"
               >
-                <feature.icon className="text-sm md:text-2xl text-[#FFD700] mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-xs sm:text-sm md:text-sm font-medium text-gray-200 group-hover:text-white leading-tight">
-                  {feature.text}
-                </span>
+                {/* Feature Card Background */}
+                <div className="absolute inset-0 bg-black/40 rounded-2xl backdrop-blur-sm border border-amber-500/20 group-hover:border-amber-400/40 group-hover:bg-black/60 transition-all duration-500"></div>
+                
+                {/* Animated Border Effect */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-amber-500/0 via-amber-400/30 to-amber-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div className="relative z-10">
+                  <feature.icon className="text-2xl md:text-3xl text-amber-400 mb-3 mx-auto group-hover:scale-110 transition-transform duration-300" />
+                  <span className="text-sm md:text-base font-semibold text-white group-hover:text-amber-200 transition-colors duration-300">
+                    {feature.text}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
 
-          {/* Optimized CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-5 justify-center items-center mb-6 px-2">
+          {/* Premium CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
             <Link 
               to="/listings" 
-              className="group relative bg-amber-300 text-gray-900 font-semibold px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-4 md:py-5 text-base sm:text-lg md:text-xl flex items-center gap-2 sm:gap-3 w-full sm:w-auto justify-center max-w-xs sm:max-w-none"
+              className="group relative bg-gradient-to-r from-amber-300 to-amber-400 text-gray-900 font-bold px-12 py-4 text-lg flex items-center gap-3 transform hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300 overflow-hidden"
             >
-              <div className="absolute inset-0 "></div>
-              <span className="whitespace-nowrap relative">Explore Properties</span>
-              <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0 relative" />
+              {/* Shine Effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+              <span className="relative">Explore Properties</span>
+              <FaArrowRight className="relative group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
             
             <Link 
               to="/contact" 
-              className="group border-2 border-[#FFD700]/50 hover:border-[#FFD700] hover:bg-[#FFD700]/10 text-amber-100 hover:text-white font-semibold px-5 sm:px-6 md:px-8 lg:px-10 py-3 sm:py-4 md:py-5 rounded-full text-sm sm:text-base md:text-lg transition-all duration-500 transform hover:scale-105 backdrop-blur-sm flex items-center gap-2 sm:gap-3 w-full sm:w-auto justify-center max-w-xs sm:max-w-none"
+              className="group relative border-2 border-amber-300/60 text-amber-100 font-light px-10 py-4 rounded-full text-lg backdrop-blur-sm transform hover:scale-105 hover:border-amber-300 hover:bg-amber-400/10 transition-all duration-300 flex items-center gap-3"
             >
-              <FaPhone className="group-hover:scale-110 transition-transform duration-300 flex-shrink-0" />
-              <span className="whitespace-nowrap">Talk to Our Team</span>
+              <FaPhone className="group-hover:scale-110 transition-transform duration-300" />
+              <span>Talk to Our Team</span>
             </Link>
           </div>
         </div>
       </div>
+
+      {/* Custom CSS for animations */}
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        @keyframes gradient {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        .animate-float {
+          animation: float linear infinite;
+        }
+        .animate-gradient {
+          background-size: 200% 200%;
+          animation: gradient 3s ease infinite;
+        }
+      `}</style>
     </section>
   );
 };
