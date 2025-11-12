@@ -7,7 +7,7 @@ const AboutHero = () => {
 
   return (
     <section 
-      className="relative rounded-3xl p-8 border border-gray-700 hover:border-amber-400/30 transition-all duration-500 hover:shadow-xl hover:shadow-amber-500/10 overflow-hidden min-h-[300px] flex items-center"
+      className="relative p-8 border border-gray-700 hover:border-amber-400/30 transition-all duration-500 hover:shadow-xl hover:shadow-amber-500/10 overflow-hidden min-h-[300px] flex items-center"
       style={{
         backgroundImage: `linear-gradient(135deg, rgba(17, 24, 39, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%), url('/assets/ab.png')`,
         backgroundSize: 'cover',
@@ -21,8 +21,8 @@ const AboutHero = () => {
 
       {/* Geometric accents */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 right-0 w-32 h-32 border-r border-t border-amber-400/10 rounded-tr-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-24 h-24 border-l border-b border-amber-400/10 rounded-bl-3xl"></div>
+        <div className="absolute top-0 right-0 w-32 h-32 border-r border-t border-amber-400/10 "></div>
+        <div className="absolute bottom-0 left-0 w-24 h-24 border-l border-b border-amber-400/10"></div>
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">

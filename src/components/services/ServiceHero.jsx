@@ -7,7 +7,7 @@ const ServiceHero = () => {
 
   return (
     <section 
-      className="relative rounded-3xl p-8 border border-gray-700 hover:border-amber-400/30 transition-all duration-500 hover:shadow-xl hover:shadow-amber-500/10 overflow-hidden min-h-[300px] flex items-center"
+      className="relative p-8 border border-gray-700 hover:border-amber-400/30 transition-all duration-500 hover:shadow-xl hover:shadow-amber-500/10 overflow-hidden min-h-[300px] flex items-center"
       style={{
         backgroundImage: `linear-gradient(135deg, rgba(17, 24, 39, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80')`,
         backgroundSize: 'cover',

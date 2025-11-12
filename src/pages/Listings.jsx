@@ -83,7 +83,7 @@ export default function Listings(){
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Search Section */}
-      <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-3xl p-8 border border-gray-800 hover:border-amber-300/50 transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-amber-300/20 md:py-30 px-4 py-20 sm:px-6 lg:px-8">
+      <div className="relative bg-gradient-to-br from-gray-900 to-black p-8 border border-gray-800 hover:border-amber-300/50 transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-amber-300/20 md:py-30 px-4 py-20 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-6">
             <h1 

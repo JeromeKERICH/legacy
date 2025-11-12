@@ -6,7 +6,7 @@ const AboutSection = () => {
   return (
     <section className="relative bg-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
           
           {/* Content Side */}
           <div className="space-y-8">
@@ -22,31 +22,30 @@ const AboutSection = () => {
             </div>
 
             {/* Intro Paragraph */}
-            <div className="space-y-6 text-gray-700">
+            <div className="space-y-3 text-gray-700">
               <p className="text-lg sm:text-xl leading-relaxed font-light" style={{ fontFamily: 'Cambria, serif' }}>
                 At Legacy Estates Limited, we don't just sell land, we help Kenyans build generational wealth. We exist to make land ownership accessible, transparent, and secure for both local and diaspora buyers.
               </p>
               
               <p className="text-lg sm:text-xl leading-relaxed font-light" style={{ fontFamily: 'Cambria, serif' }}>
                 Every property we offer is beaconed, titled, and verified, giving you total peace of mind and a foundation for your dreams.
-              </p>
-            </div>
-
-            {/* CTA Button */}
-            <div className="pt-6">
-              <Link
-                to="/about"
-                className="inline-flex items-center gap-3 group text-xl text-amber-300 hover:text-amber-200 transition-all duration-300 font-light"
+                <br/>
+                <Link to="/about" 
+                className='inline-flex items-center gap-3 underline text-gray-600 text-xl md:text-xl'
                 style={{ fontFamily: 'Cambria, serif' }}
-              >
-                <span className="border-b border-transparent hover:border-amber-300 transition-all duration-300 pb-1">
-                  Explore more about us
+                >
+                  <span className="pb-1">
+                  Learn more
                 </span>
                 <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </Link>
+                </Link>
+              </p>
+              
             </div>
+
+
           </div>
 
           {/* Image Side */}
@@ -55,7 +54,7 @@ const AboutSection = () => {
               <img
                 src="/assets/about.jpg"
                 alt="Legacy Estates - Building Legacies"
-                className="w-full md:h-[450px] h-[300px] object-cover hover:brightness-110"
+                className="w-full md:h-[450px] h-[350px] object-cover hover:brightness-110"
               />
     
             </div>
