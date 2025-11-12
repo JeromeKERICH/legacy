@@ -99,7 +99,7 @@ import {
                 ].map(({ icon: Icon, name }) => (
                   <a
                     key={name}
-                    href="#"
+                    href="https://www.facebook.com/profile.php?id=100093141535386&sk=about"
                     className="flex items-center justify-center space-x-2 text-gray-300 hover:text-gold-500 transition-colors duration-200 text-sm border border-gray-700 hover:border-gold-500 rounded-md px-3 py-2"
                   >
                     <Icon className="w-4 h-4" />

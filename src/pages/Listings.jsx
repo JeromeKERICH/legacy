@@ -81,50 +81,53 @@ export default function Listings(){
   const hasActiveFilters = q || county || category || priceRange;
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       {/* Hero Search Section */}
-      <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 hover:border-amber-400/50 transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/20 md:py-30 px-4 py-20 sm:px-6 lg:px-8">
+      <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-3xl p-8 border border-gray-800 hover:border-amber-300/50 transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-amber-300/20 md:py-30 px-4 py-20 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-3xl sm:text-4xl font-bold text-amber-600 mb-4">
+          <div className="text-center mb-6">
+            <h1 
+              className="text-3xl sm:text-4xl font-bold text-amber-300 mb-4"
+              style={{ fontFamily: 'Cambria, serif' }}
+            >
               Find Your Perfect Plot
             </h1>
-            <p className="md:text-xl text-lg text-amber-100 max-w-2xl mx-auto">
-              Discover verified, titled properties across Kenya's prime locations
-            </p>
           </div>
 
           {/* Search Bar */}
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-2xl p-2">
+            <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-2xl shadow-2xl p-2 backdrop-blur-sm border border-white/10">
               <div className="flex flex-col sm:flex-row gap-2">
                 <div className="flex-1 relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <FaSearch className="text-gray-400" />
+                    <FaSearch className="text-amber-300" />
                   </div>
                   <input
                     placeholder="Search by property name, location, or features..."
                     value={q}
                     onChange={(e) => setQ(e.target.value)}
-                    className="w-full pl-10 pr-4 py-4 border-0 rounded-xl focus:ring-2 focus:ring-amber-500 text-sm"
+                    className="w-full pl-10 pr-4 py-4 border-0 rounded-xl bg-white/5 text-white placeholder-gray-400 focus:ring-2 focus:ring-amber-300 text-sm"
                     onKeyPress={(e) => e.key === 'Enter' && fetchProperties()}
+                    style={{ fontFamily: 'Cambria, serif' }}
                   />
                 </div>
                 
                 <button
                   onClick={() => setShowFilters(!showFilters)}
-                  className="px-4 py-3 border border-gray-300 rounded-xl hover:bg-gray-50 transition-colors flex items-center gap-2 font-light text-lg"
+                  className="px-4 py-3 border border-amber-300/30 rounded-xl hover:bg-amber-300/10 transition-colors flex items-center gap-2 text-amber-300"
+                  style={{ fontFamily: 'Cambria, serif' }}
                 >
                   <FaFilter />
                   Filters
                   {hasActiveFilters && (
-                    <span className="w-2 h-2 bg-amber-500 rounded-full"></span>
+                    <span className="w-2 h-2 bg-amber-300 rounded-full"></span>
                   )}
                 </button>
 
                 <button
                   onClick={fetchProperties}
-                  className="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                  className="px-6 py-3 bg-gradient-to-r from-amber-300 to-amber-400 hover:from-amber-400 hover:to-amber-500 text-black rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                  style={{ fontFamily: 'Cambria, serif' }}
                 >
                   <FaSearch />
                   Search
@@ -133,21 +136,25 @@ export default function Listings(){
 
               {/* Advanced Filters */}
               {showFilters && (
-                <div className="mt-4 p-6 border-t border-gray-200 bg-gray-50 rounded-xl">
+                <div className="mt-4 p-6 border-t border-amber-300/20 bg-gradient-to-br from-amber-300/5 to-amber-400/5 rounded-xl backdrop-blur-sm">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        <FaMapMarkerAlt className="inline mr-2 text-amber-500" />
+                      <label 
+                        className="block text-sm font-medium text-amber-300 mb-2"
+                        style={{ fontFamily: 'Cambria, serif' }}
+                      >
+                        <FaMapMarkerAlt className="inline mr-2" />
                         County
                       </label>
                       <select
                         value={county}
                         onChange={(e) => setCounty(e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+                        className="w-full px-4 py-3 border border-amber-300/30 rounded-lg bg-white/5 text-white focus:ring-2 focus:ring-amber-300 focus:border-amber-300"
+                        style={{ fontFamily: 'Cambria, serif' }}
                       >
-                        <option value="">All Counties</option>
+                        <option value="" className="text-gray-400">All Counties</option>
                         {counties.map((countyOption) => (
-                          <option key={countyOption} value={countyOption}>
+                          <option key={countyOption} value={countyOption} className="text-black">
                             {countyOption}
                           </option>
                         ))}
@@ -155,18 +162,22 @@ export default function Listings(){
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        <FaHome className="inline mr-2 text-amber-500" />
+                      <label 
+                        className="block text-sm font-medium text-amber-300 mb-2"
+                        style={{ fontFamily: 'Cambria, serif' }}
+                      >
+                        <FaHome className="inline mr-2" />
                         Category
                       </label>
                       <select
                         value={category}
                         onChange={(e) => setCategory(e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+                        className="w-full px-4 py-3 border border-amber-300/30 rounded-lg bg-white/5 text-white focus:ring-2 focus:ring-amber-300 focus:border-amber-300"
+                        style={{ fontFamily: 'Cambria, serif' }}
                       >
-                        <option value="">All Categories</option>
+                        <option value="" className="text-gray-400">All Categories</option>
                         {categories.map((cat) => (
-                          <option key={cat} value={cat}>
+                          <option key={cat} value={cat} className="text-black">
                             {cat}
                           </option>
                         ))}
@@ -174,16 +185,20 @@ export default function Listings(){
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label 
+                        className="block text-sm font-medium text-amber-300 mb-2"
+                        style={{ fontFamily: 'Cambria, serif' }}
+                      >
                         Price Range
                       </label>
                       <select
                         value={priceRange}
                         onChange={(e) => setPriceRange(e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+                        className="w-full px-4 py-3 border border-amber-300/30 rounded-lg bg-white/5 text-white focus:ring-2 focus:ring-amber-300 focus:border-amber-300"
+                        style={{ fontFamily: 'Cambria, serif' }}
                       >
                         {priceRanges.map((range) => (
-                          <option key={range.value} value={range.value}>
+                          <option key={range.value} value={range.value} className="text-black">
                             {range.label}
                           </option>
                         ))}
@@ -192,10 +207,11 @@ export default function Listings(){
                   </div>
 
                   {/* Filter Actions */}
-                  <div className="flex justify-between items-center mt-6 pt-4 border-t border-gray-200">
+                  <div className="flex justify-between items-center mt-6 pt-4 border-t border-amber-300/20">
                     <button
                       onClick={clearFilters}
-                      className="text-gray-600 hover:text-gray-800 font-medium flex items-center gap-2"
+                      className="text-amber-300 hover:text-amber-200 font-medium flex items-center gap-2"
+                      style={{ fontFamily: 'Cambria, serif' }}
                     >
                       <FaTimes />
                       Clear All Filters
@@ -203,7 +219,8 @@ export default function Listings(){
                     
                     <button
                       onClick={fetchProperties}
-                      className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+                      className="bg-gradient-to-r from-amber-300 to-amber-400 hover:from-amber-400 hover:to-amber-500 text-black px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                      style={{ fontFamily: 'Cambria, serif' }}
                     >
                       Apply Filters
                     </button>
@@ -220,10 +237,16 @@ export default function Listings(){
         {/* Results Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
           <div>
-            <h2 className="text-2xl font-bold text-gray-900">
+            <h2 
+              className="text-2xl font-bold text-white"
+              style={{ fontFamily: 'Cambria, serif' }}
+            >
               Available Properties
             </h2>
-            <p className="text-gray-600 mt-1">
+            <p 
+              className="text-amber-300 mt-1"
+              style={{ fontFamily: 'Cambria, serif' }}
+            >
               {properties.length} property{properties.length !== 1 ? 'ies' : ''} found
               {hasActiveFilters && ' (filtered)'}
             </p>
@@ -232,7 +255,8 @@ export default function Listings(){
           {hasActiveFilters && (
             <button
               onClick={clearFilters}
-              className="flex items-center gap-2 text-amber-600 hover:text-amber-700 font-medium"
+              className="flex items-center gap-2 text-amber-300 hover:text-amber-200 font-medium"
+              style={{ fontFamily: 'Cambria, serif' }}
             >
               <FaTimes />
               Clear filters
@@ -243,8 +267,13 @@ export default function Listings(){
         {/* Loading State */}
         {loading ? (
           <div className="text-center py-20">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-500 mx-auto"></div>
-            <p className="text-gray-600 mt-4">Loading properties...</p>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-300 mx-auto"></div>
+            <p 
+              className="text-amber-300 mt-4"
+              style={{ fontFamily: 'Cambria, serif' }}
+            >
+              Loading properties...
+            </p>
           </div>
         ) : (
           <>
@@ -257,12 +286,18 @@ export default function Listings(){
               </div>
             ) : (
               /* Empty State */
-              <div className="text-center py-20 bg-white rounded-2xl shadow-sm border border-gray-200">
-                <FaHome className="mx-auto text-6xl text-gray-300 mb-4" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <div className="text-center py-20 bg-gradient-to-br from-white/5 to-white/10 rounded-2xl shadow-sm border border-amber-300/20 backdrop-blur-sm">
+                <FaHome className="mx-auto text-6xl text-amber-300 mb-4" />
+                <h3 
+                  className="text-2xl font-bold text-white mb-4"
+                  style={{ fontFamily: 'Cambria, serif' }}
+                >
                   No properties found
                 </h3>
-                <p className="text-gray-600 max-w-md mx-auto mb-8">
+                <p 
+                  className="text-amber-300 max-w-md mx-auto mb-8"
+                  style={{ fontFamily: 'Cambria, serif' }}
+                >
                   {hasActiveFilters 
                     ? "Try adjusting your search criteria or clear filters to see more properties."
                     : "We're constantly adding new properties. Check back soon or contact us for exclusive listings."
@@ -271,7 +306,8 @@ export default function Listings(){
                 {hasActiveFilters && (
                   <button
                     onClick={clearFilters}
-                    className="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+                    className="bg-gradient-to-r from-amber-300 to-amber-400 hover:from-amber-400 hover:to-amber-500 text-black font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    style={{ fontFamily: 'Cambria, serif' }}
                   >
                     Clear All Filters
                   </button>
@@ -285,7 +321,8 @@ export default function Listings(){
                 <button
                   onClick={fetchProperties}
                   disabled={loading}
-                  className="inline-flex items-center gap-2 border-2 border-amber-500 text-amber-600 hover:bg-amber-500 hover:text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 disabled:opacity-50"
+                  className="inline-flex items-center gap-2 border-2 border-amber-300 text-amber-300 hover:bg-amber-300 hover:text-black font-semibold px-8 py-3 rounded-lg transition-all duration-300 disabled:opacity-50"
+                  style={{ fontFamily: 'Cambria, serif' }}
                 >
                   <FaSync className={loading ? "animate-spin" : ""} />
                   Load More Properties

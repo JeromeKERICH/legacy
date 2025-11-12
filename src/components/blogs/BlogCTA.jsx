@@ -19,11 +19,9 @@ const BlogCTA = () => {
 
 return (
 
-    <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 md:p-12 text-center max-w-4xl mx-auto mb-10">
+    <div className="bg-black rounded-2xl p-8 md:p-12 text-center max-w-4xl mx-auto mb-10">
           <div className="max-w-2xl mx-auto">
-            <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <FaEnvelope className="text-amber-600 text-xl" />
-            </div>
+            
             
             <h3 className="md:text-3xl text-xl font-bold text-white mb-4">
               Stay Updated with Market Insights

@@ -18,8 +18,13 @@ import {
   FaFileContract
 } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import RichTextDisplay from './admin/crud/RichtextDisplay';
+
 
 export default function PropertyDetail(){
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { slug } = useParams();
   const navigate = useNavigate();
   const [property, setProperty] = useState(null);
@@ -211,11 +216,9 @@ export default function PropertyDetail(){
               </div>
 
               {/* Description */}
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Description</h3>
-                <p className="text-gray-700 leading-relaxed text-lg">
-                  {property.description}
-                </p>
+              <div className="description-section mt-6">
+                <h3 className="text-xl font-cambria font-bold text-black mb-4">Property Description</h3>
+                <RichTextDisplay content={property.description} />
               </div>
 
               {/* Categories */}

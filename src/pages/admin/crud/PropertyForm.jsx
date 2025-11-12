@@ -309,18 +309,17 @@ export default function PropertyForm() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
-                  <FaTag className="text-purple-500" />
-                  Categories (comma separated) *
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Description *
                 </label>
-                <input
-                  type="text"
-                  required
-                  value={form.categories}
-                  onChange={(e) => handleChange('categories', e.target.value)}
-                  placeholder="e.g., Residential, Commercial, Land, Apartment, Villa"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-colors"
+                <RichTextEditor
+                  value={form.description}
+                  onChange={(val) => handleChange('description', val)}
+                  placeholder="Describe the property features, location advantages, amenities, and any other important details..."
                 />
+                <p className="text-xs text-gray-500 mt-2">
+                  Use the toolbar to format your text with headings, lists, and emphasis.
+                </p>
               </div>
 
               <div>

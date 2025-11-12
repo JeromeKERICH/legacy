@@ -83,7 +83,7 @@ const ArticlesSection = () => {
               
               <div className="p-6">
                 <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
-                  <span className="bg-amber-100 text-amber-800 px-2 py-1 rounded text-xs font-medium">
+                  <span className="bg-amber-300 text-amber-800 px-2 py-1 rounded text-xs font-medium">
                     {article.category}
                   </span>
                   <span>{article.readTime}</span>
@@ -99,7 +99,7 @@ const ArticlesSection = () => {
                 
                 <Link
                   to={`/articles/${article.id}`}
-                  className="inline-flex items-center gap-2 text-amber-600 hover:text-amber-700 font-medium text-sm transition-colors group"
+                  className="inline-flex items-center gap-2 text-amber-300  font-medium text-sm transition-colors group"
                 >
                   Read more
                   <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-200" />
@@ -112,16 +112,7 @@ const ArticlesSection = () => {
         {/* Subscription Section */}
         
 
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <Link
-            to="/blog"
-            className="inline-flex items-center gap-2 border-2 border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 px-8 py-4 rounded-lg transition-all duration-300 font-semibold"
-          >
-            View all articles
-            <FaArrowRight />
-          </Link>
-        </div>
+    
       </div>
     </section>
   );

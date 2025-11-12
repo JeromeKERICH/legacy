@@ -4,6 +4,18 @@ import { Link } from 'react-router-dom';
 
 const Leadership = () => {
   const leaders = [
+    
+    {
+      name: "Princess Caroline",
+      title: "Founder & Managing Director",
+      description: "An expert in legal, investment, and trade facilitation, she leads with passion for empowering communities through sustainable property ownership and wealth building.",
+      image: "/assets/princ.jpg",
+      social: {
+        linkedin: "https://www.linkedin.com/in/princess-c-mutisya/",
+        email: "princess@legacyestates.co.ke"
+      }
+    }, 
+
     {
       name: "Morris Njagi",
       title: "Chief Executive Officer",
@@ -14,16 +26,6 @@ const Leadership = () => {
         email: "moris@legacyestates.co.ke"
       }
     },
-    {
-      name: "Princess Caroline",
-      title: "Founder & Managing Director",
-      description: "An expert in legal, investment, and trade facilitation, she leads with passion for empowering communities through sustainable property ownership and wealth building.",
-      image: "/assets/princ.jpg",
-      social: {
-        linkedin: "https://www.linkedin.com/in/princess-c-mutisya/",
-        email: "princess@legacyestates.co.ke"
-      }
-    }
   ];
 
   return (
